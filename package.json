@@ -1,0 +1,25 @@
+{
+  "name": "zhan",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "start:client": "npm start --workspace=client",
+    "start:server": "npm start --workspace=server",
+    "start": "concurrently \"npm run start:client\" \"npm run start:server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jiayizhan1/verifica-angular-express-jwt.git"
+  },
+  "keywords": [],
+  "author": "JJ",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
