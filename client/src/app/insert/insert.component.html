@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <h2>Aggiungi modello</h2>
+
+    <form [formGroup]="modelloForm" (ngSubmit)="onSubmit()">
+      <select class="form-select" aria-label="Default select example">
+        <option selected value="">Seleziona marche</option>
+        @for(a of auto; track a._id) {
+        <option>{{ a.marca }}</option>
+        }
+      </select>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Nome</label>
+        <input type="text" class="form-control" formControlName="modello" />
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">CIlindrata</label>
+        <input type="text" class="form-control" formControlName="cilindrata" />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">segmento</label>
+        <input type="text" class="form-control" formControlName="segmento" />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">nPorte</label>
+        <input type="text" class="form-control" formControlName="nPorte" />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">vendite2024</label>
+        <input type="text" class="form-control" formControlName="vendite2024" />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
